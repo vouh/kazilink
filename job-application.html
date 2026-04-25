@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#76433f",
+                      "surface-tint": "#366855",
+                      "on-surface-variant": "#404944",
+                      "surface-container": "#edeeeb",
+                      "on-tertiary-fixed": "#350f0d",
+                      "outline": "#707974",
+                      "on-surface": "#191c1b",
+                      "on-primary-fixed": "#002116",
+                      "on-primary-fixed-variant": "#1c4f3e",
+                      "on-primary-container": "#9bcfb8",
+                      "primary-fixed-dim": "#9dd2bb",
+                      "tertiary-fixed": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "tertiary": "#5b2d29",
+                      "secondary": "#1b6a53",
+                      "on-secondary": "#ffffff",
+                      "primary": "#0c4232",
+                      "surface-variant": "#e1e3e0",
+                      "on-tertiary-container": "#f8b3ad",
+                      "on-tertiary-fixed-variant": "#6a3935",
+                      "surface-container-highest": "#e1e3e0",
+                      "inverse-on-surface": "#f0f1ee",
+                      "secondary-fixed-dim": "#8bd5b9",
+                      "secondary-container": "#a6f2d4",
+                      "outline-variant": "#c0c9c3",
+                      "on-secondary-fixed-variant": "#00513d",
+                      "inverse-primary": "#9dd2bb",
+                      "primary-container": "#285a48",
+                      "on-secondary-fixed": "#002117",
+                      "inverse-surface": "#2e312f",
+                      "on-background": "#191c1b",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#b9eed6",
+                      "on-secondary-container": "#237159",
+                      "surface-dim": "#d9dad7",
+                      "surface-bright": "#f9faf6",
+                      "surface-container-low": "#f3f4f1",
+                      "surface": "#f9faf6",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed": "#a6f2d4",
+                      "surface-container-high": "#e7e9e5",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "background": "#f9faf6",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed-dim": "#fbb5af"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "stack-sm": "4px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "stack-md": "12px",
+                      "stack-lg": "24px"
+              },
+              "fontFamily": {
+                      "h3": ["Manrope"],
+                      "body-lg": ["Manrope"],
+                      "caption": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "label-md": ["Manrope"],
+                      "display": ["Manrope"],
+                      "h1": ["Manrope"],
+                      "h2": ["Manrope"]
+              },
+              "fontSize": {
+                      "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                      "display": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                      "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { color: #0c4232; font-weight: 700; border-bottom: 3px solid #0c4232; }
+        .step-inactive { color: #707974; }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="bg-white dark:bg-emerald-950 border-b border-emerald-900/10 dark:border-emerald-100/10 sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter">KaziLink</span>
+<div class="hidden md:flex items-center gap-6 font-manrope text-sm font-semibold tracking-tight">
+<a class="text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1" href="#">Browse Jobs</a>
+<a class="text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Counties</a>
+<a class="text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Companies</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-manrope text-sm font-semibold text-emerald-700/70 hover:text-emerald-900">Sign In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold hover:opacity-90 transition-all">Post a Job</button>
+</div>
+</div>
+</nav>
+<main class="min-h-[calc(100vh-140px)] flex items-center justify-center p-4">
+<!-- Mock Background Content -->
+<div class="max-w-4xl w-full opacity-20 pointer-events-none select-none">
+<div class="flex flex-col gap-6">
+<div class="bg-white p-gutter rounded-xl shadow-sm border border-outline-variant">
+<div class="flex justify-between items-start">
+<div>
+<h1 class="font-h1 text-h1 text-primary">Senior UI/UX Designer</h1>
+<p class="font-body-lg text-body-lg text-secondary">Safaricom PLC • Nairobi, Kenya</p>
+</div>
+<div class="flex gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-caption font-label-md">Full-time</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-caption font-label-md">Remote Friendly</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Application Flow Overlay -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+<div class="bg-surface w-full max-w-2xl rounded-xl shadow-[0px_4px_20px_rgba(9,20,19,0.12)] border border-outline-variant overflow-hidden flex flex-col max-h-[921px]">
+<!-- Modal Header & Stepper -->
+<div class="bg-white border-b border-outline-variant p-stack-lg">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-h2 text-h2 text-primary">Job Application</h2>
+<button class="text-outline hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-2">
+<div class="flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm">1</div>
+<span class="font-label-md text-caption text-primary">Review</span>
+</div>
+<div class="h-[2px] flex-1 bg-outline-variant mx-4"></div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-outline font-bold text-sm">2</div>
+<span class="font-label-md text-caption text-outline">Upload</span>
+</div>
+<div class="h-[2px] flex-1 bg-outline-variant mx-4"></div>
+<div class="flex flex-col items-center gap-1">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-outline-variant flex items-center justify-center text-outline font-bold text-sm">3</div>
+<span class="font-label-md text-caption text-outline">Message</span>
+</div>
+</div>
+</div>
+<!-- Scrollable Content Area -->
+<div class="overflow-y-auto p-stack-lg flex-1">
+<!-- STEP 1: REVIEW DETAILS (Active by default for demonstration) -->
+<div class="space-y-stack-lg">
+<div class="bg-surface-container-low p-stack-md rounded-lg border border-outline-variant/30">
+<h3 class="font-label-md text-label-md text-primary mb-2">Job Information</h3>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-white border border-outline-variant flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="corporate minimalist brand logo with geometric green shapes on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHarCes0EFV4SDnVREvE0qUl0AS2uS0TOd8BhYFaOzGXfiXi3EOhcMeehjCekc2OuFoLJUEOc_vxsREFIM2oRw7aTxbYPnrRl_8ZkGrcfuDICVhUoJrm6hw-SGrBJsxZvHb-scTLPjGKiJH7ZXzC0ZkuvLQe_uXtGiGZ8dNmVxmbxTztXMYfiX53_fVs-tlA-eqWQ1alLVwMAjx9e2R5KQ9sK6tqwyvwPG5o2zupHimThVReY-gBqLubHRvSGbnm463SyiEpTSKmw"/>
+</div>
+<div>
+<p class="font-label-md text-primary">Senior UI/UX Designer</p>
+<p class="text-caption text-on-surface-variant">Safaricom PLC • Nairobi</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="font-label-md text-label-md text-primary">Your Contact Details</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-caption font-label-md text-on-surface-variant">Full Name</label>
+<div class="p-3 bg-white border border-outline-variant rounded-lg font-body-md text-on-surface">KaziLink User</div>
+</div>
+<div class="space-y-1">
+<label class="text-caption font-label-md text-on-surface-variant">Email Address</label>
+<div class="p-3 bg-white border border-outline-variant rounded-lg font-body-md text-on-surface">user@kazilink.co.ke</div>
+</div>
+</div>
+<div class="p-4 bg-secondary-container/20 rounded-lg flex gap-3 items-start border border-secondary/10">
+<span class="material-symbols-outlined text-secondary text-sm">info</span>
+<p class="text-caption text-secondary">Your profile information is automatically synced. Update your settings if these details are incorrect.</p>
+</div>
+</div>
+</div>
+<!-- STEP 2: CV UPLOAD (Hidden for demo, would toggle state) -->
+<div class="hidden space-y-stack-lg">
+<h3 class="font-h3 text-h3 text-primary">Upload your CV</h3>
+<p class="text-body-md text-on-surface-variant -mt-2">Ensure your resume is up-to-date and in PDF format.</p>
+<div class="border-2 border-dashed border-secondary/30 bg-surface-container-low rounded-xl p-12 flex flex-col items-center justify-center gap-4 text-center hover:bg-secondary-container/10 transition-colors cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">cloud_upload</span>
+</div>
+<div>
+<p class="font-h3 text-primary">Drag &amp; drop your file here</p>
+<p class="text-caption text-on-surface-variant">Supported formats: PDF, DOCX (Max 5MB)</p>
+</div>
+<button class="mt-2 px-6 py-2 border border-primary text-primary font-label-md rounded-lg hover:bg-primary hover:text-white transition-all">Browse Files</button>
+</div>
+</div>
+<!-- STEP 3: COVER LETTER (Hidden for demo) -->
+<div class="hidden space-y-stack-lg">
+<h3 class="font-h3 text-h3 text-primary">Cover Letter (Optional)</h3>
+<p class="text-body-md text-on-surface-variant -mt-2">Tell the hiring manager why you're a great fit for this role.</p>
+<div class="space-y-1">
+<textarea class="w-full p-4 bg-white border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-none font-body-md" placeholder="Type your message here..." rows="6"></textarea>
+<p class="text-right text-caption text-on-surface-variant">0 / 2000 characters</p>
+</div>
+</div>
+<!-- SUCCESS STATE (Hidden for demo) -->
+<div class="hidden flex flex-col items-center justify-center py-12 text-center animate-in fade-in duration-500">
+<div class="w-24 h-24 rounded-full bg-secondary-container flex items-center justify-center text-secondary mb-6 shadow-lg shadow-secondary/10">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="font-display text-h1 text-primary mb-2">Success!</h2>
+<p class="font-body-lg text-on-surface-variant max-w-sm">Your application for Senior UI/UX Designer has been submitted to Safaricom PLC.</p>
+<div class="mt-10 w-full bg-white border border-outline-variant rounded-xl p-4 text-left">
+<div class="flex justify-between items-center">
+<span class="text-caption font-label-md text-on-surface-variant">Application ID</span>
+<span class="text-caption font-bold text-primary">KZL-882910</span>
+</div>
+</div>
+<button class="mt-8 w-full bg-primary text-white py-3 rounded-lg font-h3 hover:opacity-90 transition-all">Back to Browse Jobs</button>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="bg-white border-t border-outline-variant p-6 flex justify-between items-center">
+<button class="text-on-surface-variant font-label-md hover:text-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                        Cancel
+                    </button>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary-fixed px-8 py-3 rounded-lg font-h3 shadow-sm hover:opacity-90 active:scale-95 transition-all">
+                            Next: Upload CV
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-emerald-950 dark:bg-black text-emerald-100 mt-20">
+<div class="w-full py-12 px-6 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto font-manrope text-sm">
+<div class="flex flex-col gap-4">
+<span class="text-xl font-black text-emerald-100">KaziLink</span>
+<p class="text-emerald-100/60 leading-relaxed">The premier bridge between talent and opportunity in Kenya. Empowering careers since 2024.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-white">Candidates</h4>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Browse Jobs</a>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">County Filters</a>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Career Advice</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-white">Employers</h4>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Post a Job</a>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Talent Search</a>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Pricing Plans</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-white">Support</h4>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Help Center</a>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Privacy Policy</a>
+<a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-6 border-t border-white/10 text-center md:text-left text-emerald-100/40 text-xs">
+            © 2024 KaziLink Kenya. Connecting Talent to Opportunity.
+        </div>
+</footer>
+<!-- Bottom Navigation Mobile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-emerald-950/90 backdrop-blur-md border-t border-emerald-900/10 dark:border-emerald-100/10 rounded-t-2xl shadow-[0_-4px_20px_rgba(9,20,19,0.04)]">
+<div class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2 scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">home</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-50 rounded-xl p-2 scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">search</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2 scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">business_center</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">My Jobs</span>
+</div>
+<div class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2 scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

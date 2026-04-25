@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#76433f",
+                    "surface-tint": "#366855",
+                    "on-surface-variant": "#404944",
+                    "surface-container": "#edeeeb",
+                    "on-tertiary-fixed": "#350f0d",
+                    "outline": "#707974",
+                    "on-surface": "#191c1b",
+                    "on-primary-fixed": "#002116",
+                    "on-primary-fixed-variant": "#1c4f3e",
+                    "on-primary-container": "#9bcfb8",
+                    "primary-fixed-dim": "#9dd2bb",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "tertiary": "#5b2d29",
+                    "secondary": "#1b6a53",
+                    "on-secondary": "#ffffff",
+                    "primary": "#0c4232",
+                    "surface-variant": "#e1e3e0",
+                    "on-tertiary-container": "#f8b3ad",
+                    "on-tertiary-fixed-variant": "#6a3935",
+                    "surface-container-highest": "#e1e3e0",
+                    "inverse-on-surface": "#f0f1ee",
+                    "secondary-fixed-dim": "#8bd5b9",
+                    "secondary-container": "#a6f2d4",
+                    "outline-variant": "#c0c9c3",
+                    "on-secondary-fixed-variant": "#00513d",
+                    "inverse-primary": "#9dd2bb",
+                    "primary-container": "#285a48",
+                    "on-secondary-fixed": "#002117",
+                    "inverse-surface": "#2e312f",
+                    "on-background": "#191c1b",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#b9eed6",
+                    "on-secondary-container": "#237159",
+                    "surface-dim": "#d9dad7",
+                    "surface-bright": "#f9faf6",
+                    "surface-container-low": "#f3f4f1",
+                    "surface": "#f9faf6",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#a6f2d4",
+                    "surface-container-high": "#e7e9e5",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f9faf6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#fbb5af"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-sm": "4px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-md": "12px",
+                    "stack-lg": "24px"
+            },
+            "fontFamily": {
+                    "h3": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "caption": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "display": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "h2": ["Manrope"]
+            },
+            "fontSize": {
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "display": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sponsored-border {
+            border: 2px dashed #408A71;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-white dark:bg-emerald-950 border-b border-emerald-900/10 dark:border-emerald-100/10 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-gutter">
+<span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter">KaziLink</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1" href="#">Browse Jobs</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Counties</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Companies</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block font-manrope text-sm font-semibold tracking-tight text-emerald-700/70 dark:text-emerald-300/70 px-4 py-2">Sign In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold tracking-tight hover:opacity-90 active:scale-95 transition-all">Post a Job</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-gutter py-stack-lg flex flex-col md:flex-row gap-gutter">
+<!-- Left Column: Job Details -->
+<div class="flex-1 space-y-gutter">
+<!-- Hero Card -->
+<section class="bg-surface-container-lowest p-stack-lg rounded-xl border border-outline-variant shadow-[0_4px_20px_rgba(9,20,19,0.04)]">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-stack-md">
+<div>
+<h1 class="font-h1 text-h1 text-primary mb-2">Senior Environmental Engineer</h1>
+<div class="flex flex-wrap items-center gap-3">
+<span class="font-label-md text-label-md text-secondary">Green Horizon Solutions</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span class="font-label-md text-label-md">Nairobi County</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full font-label-md text-label-md">Full-time</span>
+<span class="font-h3 text-h3 text-primary">KES 180,000 - 250,000</span>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-stack-lg mt-stack-lg">
+<h2 class="font-h2 text-h2 text-primary mb-4">Job Description</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        We are seeking a highly skilled Senior Environmental Engineer to lead our sustainable infrastructure projects across East Africa. In this role, you will be responsible for designing and implementing solutions that minimize environmental impact while maximizing operational efficiency for our corporate clients.
+                    </p>
+<h3 class="font-h3 text-h3 text-primary mb-4">Key Requirements</h3>
+<ul class="space-y-3 mb-8">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Master's degree in Environmental Engineering or related field.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Minimum 8 years of experience in large-scale infrastructure projects.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Professional certification from the Engineers Board of Kenya (EBK).</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Proven track record of managing EIA and Audit processes.</span>
+</li>
+</ul>
+<h3 class="font-h3 text-h3 text-primary mb-4">Benefits</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 border border-outline-variant">
+<span class="material-symbols-outlined text-secondary">medical_services</span>
+<span class="font-label-md text-label-md text-on-surface">Comprehensive Medical Cover</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 border border-outline-variant">
+<span class="material-symbols-outlined text-secondary">flight</span>
+<span class="font-label-md text-label-md text-on-surface">Annual Leave Allowance</span>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 border border-outline-variant">
+<span class="material-symbols-outlined text-secondary">home_work</span>
+<span class="font-label-md text-label-md text-on-surface">Remote Work Options</span>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 border border-outline-variant">
+<span class="material-symbols-outlined text-secondary">trending_up</span>
+<span class="font-label-md text-label-md text-on-surface">Performance Bonuses</span>
+</div>
+</div>
+</div>
+</div></div></section>
+<!-- Related Jobs -->
+<section class="space-y-stack-md">
+<h2 class="font-h2 text-h2 text-primary">Related Opportunities</h2>
+<div class="grid grid-cols-1 gap-4">
+<!-- Related Card 1 -->
+<div class="bg-white border border-emerald-900/10 p-5 rounded-xl shadow-[0_4px_20px_rgba(9,20,19,0.04)] flex items-center justify-between hover:border-secondary transition-all">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">eco</span>
+</div>
+<div>
+<h4 class="font-h3 text-[18px] text-primary">Water Resource Manager</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">AquaPure Kenya • Kiambu</p>
+</div>
+</div>
+<button class="text-secondary border border-secondary px-4 py-2 rounded-lg font-label-md hover:bg-secondary-container/20">View Job</button>
+</div>
+<!-- Related Card 2 -->
+<div class="bg-white border border-emerald-900/10 p-5 rounded-xl shadow-[0_4px_20px_rgba(9,20,19,0.04)] flex items-center justify-between hover:border-secondary transition-all">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">solar_power</span>
+</div>
+<div>
+<h4 class="font-h3 text-[18px] text-primary">Renewable Energy Consultant</h4>
+<p class="font-label-md text-label-md text-on-surface-variant">Solara Ltd • Nakuru</p>
+</div>
+</div>
+<button class="text-secondary border border-secondary px-4 py-2 rounded-lg font-label-md hover:bg-secondary-container/20">View Job</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar -->
+<aside class="md:w-80 space-y-gutter">
+<!-- Company Card -->
+<div class="bg-white border border-outline-variant p-6 rounded-xl">
+<div class="flex flex-col items-center text-center">
+<img class="w-20 h-20 rounded-xl mb-4 object-cover border border-outline-variant" data-alt="minimalist professional logo of a sustainable energy company with green leaf and geometric circle elements on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeHFMh--4VdN1K4Q6Z8aHHX3r-vV6Lo5rLuCaplMsLyJAJ3IfJ-sF6CxmkilOnVtipFA2f1pheGUH4emUIsM_J75cfQh23pGPvrVVNOTS1kiDnhzjuQR4AZbHrnahrsxvREz4q76U5YkQejWfzz2TxIM44yLLoFS4N847eyQKtujrOHY4YCPB76y_tJ2dDJ2EDLN6XXo5XbztDPZ88uYMKEuYMF2tcyk0_r9ujg_-G71USM-fO7LUf9NchwNKpMn_3OxrDZ5kLags"/>
+<h3 class="font-h3 text-h3 text-primary">Green Horizon Solutions</h3>
+<p class="font-label-md text-label-md text-on-surface-variant mb-6">Environmental Services • 50-200 Employees</p>
+<div class="w-full space-y-3">
+<button class="w-full bg-primary-container text-on-primary-container font-h3 text-[16px] py-3 rounded-lg hover:opacity-90 transition-opacity">Apply Now</button>
+<button class="w-full border border-primary text-primary font-h3 text-[16px] py-3 rounded-lg hover:bg-surface-container transition-colors">Save Job</button>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant">
+<p class="font-body-md text-body-md text-on-surface-variant italic">"Building a cleaner, more sustainable future for Kenya, one project at a time."</p>
+</div>
+</div>
+<!-- Ad Unit (Sponsored) -->
+<div class="sponsored-border p-6 rounded-xl bg-surface-container-low relative">
+<span class="absolute top-3 right-3 font-caption text-caption uppercase text-primary tracking-widest">Sponsored</span>
+<h4 class="font-label-md text-label-md text-primary mb-2">Advance Your Career</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Get certified in ESG Reporting and increase your hiring chances by 40%.</p>
+<img class="w-full h-32 object-cover rounded-lg mb-4" data-alt="modern professional certificate on a wooden desk with a laptop and a cup of coffee, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZJvIHHviCuh9Z9fGyPTGKi60PCJ0_TLXRDTq5LN_NrzBDbZc3vc1L_SoLJ1VaLysffb2eyFpP9InKPTYvjXPYFPwkYUOeeBlEJCuXEvzX_G8zDXPoUZm7cpWbVHFaq4-JME64Qw6rFbAGnNVFEucsYYMIw1Te9eMt75cfO3a525e0tJ8Iev2ze4dIi1tC1vNqknNB-UJz4FcmP_dYaLwO1aO8QeCZcCVvdPTYP7Oda7qA5QtjpqVGPQMH_pTcPXNZ7t0jYebPYXY"/>
+<a class="text-secondary font-label-md text-label-md flex items-center gap-1 group" href="#">
+                    Learn more <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Sticky Apply Button for Mobile -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-md p-4 border-t border-outline-variant z-40">
+<button class="w-full bg-primary-container text-on-primary-container font-h3 text-[18px] py-4 rounded-xl shadow-lg">Apply for this Position</button>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-950 dark:bg-black border-t border-white/10 mt-stack-lg">
+<div class="w-full py-12 px-6 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-black text-emerald-100">KaziLink</span>
+<p class="font-manrope text-sm text-emerald-100/60 mt-4 leading-relaxed">
+                    Connecting Kenyan talent with world-class opportunities. The most trusted recruitment platform in East Africa.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-emerald-100 mb-4">Navigation</h4>
+<ul class="space-y-3">
+<li><a class="font-manrope text-sm text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">About Us</a></li>
+<li><a class="font-manrope text-sm text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">For Employers</a></li>
+<li><a class="font-manrope text-sm text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-emerald-100 mb-4">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-manrope text-sm text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-manrope text-sm text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-emerald-100 mb-4">Stay Updated</h4>
+<div class="flex flex-col gap-3">
+<input class="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-secondary transition-colors" placeholder="Email address" type="email"/>
+<button class="bg-secondary text-white px-4 py-2 rounded-lg font-label-md hover:bg-secondary/90 transition-colors">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-8 border-t border-white/5 text-center">
+<p class="font-manrope text-sm text-emerald-100/60">© 2024 KaziLink Kenya. Connecting Talent to Opportunity.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-emerald-950/90 backdrop-blur-md border-t border-emerald-900/10 dark:border-emerald-100/10 shadow-[0_-4px_20px_rgba(9,20,19,0.04)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2 scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">home</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-50 rounded-xl p-2 scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">search</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2 scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">business_center</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">My Jobs</span>
+</div>
+<div class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2 scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</div>
+</nav>
+</body></html>

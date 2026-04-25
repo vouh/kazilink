@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#76433f",
+                    "surface-tint": "#366855",
+                    "on-surface-variant": "#404944",
+                    "surface-container": "#edeeeb",
+                    "on-tertiary-fixed": "#350f0d",
+                    "outline": "#707974",
+                    "on-surface": "#191c1b",
+                    "on-primary-fixed": "#002116",
+                    "on-primary-fixed-variant": "#1c4f3e",
+                    "on-primary-container": "#9bcfb8",
+                    "primary-fixed-dim": "#9dd2bb",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "tertiary": "#5b2d29",
+                    "secondary": "#1b6a53",
+                    "on-secondary": "#ffffff",
+                    "primary": "#0c4232",
+                    "surface-variant": "#e1e3e0",
+                    "on-tertiary-container": "#f8b3ad",
+                    "on-tertiary-fixed-variant": "#6a3935",
+                    "surface-container-highest": "#e1e3e0",
+                    "inverse-on-surface": "#f0f1ee",
+                    "secondary-fixed-dim": "#8bd5b9",
+                    "secondary-container": "#a6f2d4",
+                    "outline-variant": "#c0c9c3",
+                    "on-secondary-fixed-variant": "#00513d",
+                    "inverse-primary": "#9dd2bb",
+                    "primary-container": "#285a48",
+                    "on-secondary-fixed": "#002117",
+                    "inverse-surface": "#2e312f",
+                    "on-background": "#191c1b",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#b9eed6",
+                    "on-secondary-container": "#237159",
+                    "surface-dim": "#d9dad7",
+                    "surface-bright": "#f9faf6",
+                    "surface-container-low": "#f3f4f1",
+                    "surface": "#f9faf6",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#a6f2d4",
+                    "surface-container-high": "#e7e9e5",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f9faf6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#fbb5af"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "stack-sm": "4px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "stack-md": "12px",
+                    "stack-lg": "24px"
+            },
+            "fontFamily": {
+                    "h3": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "caption": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "display": ["Manrope"],
+                    "h1": ["Manrope"],
+                    "h2": ["Manrope"]
+            },
+            "fontSize": {
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "caption": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "display": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary-container">
+<!-- TopNavBar -->
+<header class="bg-white dark:bg-emerald-950 border-b border-emerald-900/10 dark:border-emerald-100/10 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter">KaziLink</span>
+<nav class="hidden md:flex items-center gap-6 font-manrope text-sm font-semibold tracking-tight">
+<a class="text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1" href="#">Browse Jobs</a>
+<a class="text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Counties</a>
+<a class="text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Companies</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-emerald-700/70 font-manrope text-sm font-semibold hover:text-emerald-900 transition-colors">Sign In</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold hover:opacity-90 active:scale-95 transition-all">Post a Job</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-white pt-16 pb-24 px-margin-mobile overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#b9eed6_0%,transparent_40%)] opacity-30"></div>
+<div class="max-w-7xl mx-auto text-center relative z-10">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-full font-label-md text-caption mb-stack-lg uppercase tracking-widest">Empowering Kenya's Workforce</span>
+<h1 class="font-display text-display text-primary mb-stack-lg max-w-3xl mx-auto">Find Your Kazi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Connecting talent with high-impact opportunities across all 47 counties. Your next career move starts here.</p>
+<!-- Search Bar Container -->
+<div class="max-w-4xl mx-auto bg-white p-2 rounded-2xl shadow-[0_12px_40px_rgba(9,20,19,0.08)] border border-outline-variant flex flex-col md:flex-row items-center gap-2">
+<div class="flex-1 flex items-center w-full px-4 gap-3 border-b md:border-b-0 md:border-r border-outline-variant py-3 md:py-0">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="w-full border-none focus:ring-0 font-body-md bg-transparent placeholder:text-outline/60" placeholder="Job title, skills or keyword" type="text"/>
+</div>
+<div class="flex-1 flex items-center w-full px-4 gap-3 py-3 md:py-0">
+<span class="material-symbols-outlined text-outline">location_on</span>
+<select class="w-full border-none focus:ring-0 font-body-md bg-transparent text-on-surface">
+<option>Nairobi County</option>
+<option>Mombasa County</option>
+<option>Kisumu County</option>
+<option>Nakuru County</option>
+<option>Kiambu County</option>
+</select>
+</div>
+<button class="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-xl font-label-md hover:bg-primary-container transition-all active:scale-95">Search Jobs</button>
+</div>
+</div>
+</section>
+<!-- Stats Strip -->
+<section class="bg-primary text-on-primary py-12">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-3 gap-8">
+<div class="text-center border-r border-on-primary/10 last:border-r-0">
+<div class="text-h1 font-h1">12,450+</div>
+<div class="font-label-md text-caption uppercase tracking-wider opacity-80">Jobs Posted</div>
+</div>
+<div class="text-center border-r border-on-primary/10 last:border-r-0">
+<div class="text-h1 font-h1">3,200+</div>
+<div class="font-label-md text-caption uppercase tracking-wider opacity-80">Verified Companies</div>
+</div>
+<div class="text-center col-span-2 md:col-span-1">
+<div class="text-h1 font-h1">45,000+</div>
+<div class="font-label-md text-caption uppercase tracking-wider opacity-80">Active Job Seekers</div>
+</div>
+</div>
+</section>
+<!-- Job Category Grid -->
+<section class="py-24 px-margin-mobile max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-2">Explore by Category</h2>
+<p class="font-body-md text-on-surface-variant">Find the field that best fits your expertise</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-label-md hover:underline">
+                    View All Categories <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Category Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-8 rounded-2xl hover:border-primary/40 hover:shadow-lg transition-all group cursor-pointer">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-xl mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">developer_mode</span>
+</div>
+<h3 class="font-h3 text-h3 mb-1">Technology</h3>
+<p class="font-caption text-caption text-outline">1,240 Openings</p>
+</div>
+<!-- Category Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-8 rounded-2xl hover:border-primary/40 hover:shadow-lg transition-all group cursor-pointer">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-xl mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<h3 class="font-h3 text-h3 mb-1">Finance</h3>
+<p class="font-caption text-caption text-outline">850 Openings</p>
+</div>
+<!-- Category Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-8 rounded-2xl hover:border-primary/40 hover:shadow-lg transition-all group cursor-pointer">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-xl mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">medical_services</span>
+</div>
+<h3 class="font-h3 text-h3 mb-1">Healthcare</h3>
+<p class="font-caption text-caption text-outline">430 Openings</p>
+</div>
+<!-- Category Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 p-8 rounded-2xl hover:border-primary/40 hover:shadow-lg transition-all group cursor-pointer">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container flex items-center justify-center rounded-xl mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">agriculture</span>
+</div>
+<h3 class="font-h3 text-h3 mb-1">Agribusiness</h3>
+<p class="font-caption text-caption text-outline">612 Openings</p>
+</div>
+</div>
+</section>
+<!-- Featured Jobs -->
+<section class="bg-surface-container-low py-24 px-margin-mobile">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
+<h2 class="font-h2 text-h2 text-primary">Featured Opportunities</h2>
+<div class="flex gap-2">
+<button class="bg-white border border-outline-variant px-4 py-2 rounded-full text-label-md font-label-md hover:bg-surface-variant transition-colors">Remote</button>
+<button class="bg-white border border-outline-variant px-4 py-2 rounded-full text-label-md font-label-md hover:bg-surface-variant transition-colors">Full-time</button>
+<button class="bg-primary text-white px-4 py-2 rounded-full text-label-md font-label-md">All Jobs</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Job Card 1 -->
+<div class="bg-white p-6 rounded-2xl border border-emerald-900/10 shadow-[0_4px_20px_rgba(9,20,19,0.04)] hover:shadow-xl transition-all relative">
+<div class="absolute top-6 right-6">
+<span class="font-caption text-caption bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full uppercase">New</span>
+</div>
+<div class="flex items-start gap-4 mb-6">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="modern tech company office interior with sleek wooden furniture and glass partitions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8eMYbInxY7NLX0ajAlGB-36VcFJZYribN654OSb2448r4ysIhcqd4YiWXh5mhiBzXXL072z35b3BxmA2bJHnSf6XAmGcaeL_ABhthSTwH6JfYvYilzRN689IM9xdVVesWac9Eu20_q7mXqBmAbUcTpj4Hs6peCQmq9r9oeIdewjIAyaV1cisJwzh15kcv-4vFyN5oE5oERX1TwMlatcCqRPkufird7_gAdT7g3fqSygSmhtqg9YB6CJ1HzyvFXH18Magle_YxKaM"/>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-primary mb-1">Senior UX Designer</h3>
+<p class="font-label-md text-label-md text-secondary">Safaricom PLC</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 mb-6">
+<span class="flex items-center gap-1.5 font-caption text-caption text-outline">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Nairobi
+                            </span>
+<span class="flex items-center gap-1.5 font-caption text-caption text-outline">
+<span class="material-symbols-outlined text-[18px]">schedule</span> Full-time
+                            </span>
+<span class="flex items-center gap-1.5 font-caption text-caption text-outline">
+<span class="material-symbols-outlined text-[18px]">payments</span> KSh 150k - 250k
+                            </span>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant">
+<p class="font-caption text-caption text-outline">Posted 2 hours ago</p>
+<button class="text-primary font-label-md hover:underline decoration-2 underline-offset-4">Apply Now</button>
+</div>
+</div>
+<!-- Job Card 2 (Sponsored) -->
+<div class="bg-white p-6 rounded-2xl border-2 border-dashed border-secondary/30 shadow-[0_4px_20px_rgba(9,20,19,0.04)] relative">
+<div class="absolute top-6 right-6">
+<span class="font-caption text-caption text-outline uppercase tracking-widest font-bold">Sponsored</span>
+</div>
+<div class="flex items-start gap-4 mb-6">
+<div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="professional business team collaborating in a bright modern workspace with laptops" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyfcYsUWScnl7ciLMACaxYjPe32Nr9Y0syqlt60FZ1Eqpx6JBeOjQDVg2DFK3QC1n0q1muGdQUI0JZkghbbNMHz4UGA2Aozj0q_PZpcZ1Gst63HDOhxEYUK0BjuaSpwgCR53-qdQE4BHw05AFxtF7NcR_OINDoWd-8VBe8Hmta_Hmo-t3oNRRuPl2w3d53ZbovrLr-pPFm4iPEkD3K14MWqf7IIPPwNCB318PKG8aCV8MQ4aE74mHwIEimX7iwCPs5M5cIW9izmkU"/>
+</div>
+<div>
+<h3 class="font-h3 text-h3 text-primary mb-1">Data Analyst</h3>
+<p class="font-label-md text-label-md text-secondary">Equity Bank Kenya</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 mb-6">
+<span class="flex items-center gap-1.5 font-caption text-caption text-outline">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Upper Hill, Nairobi
+                            </span>
+<span class="flex items-center gap-1.5 font-caption text-caption text-outline">
+<span class="material-symbols-outlined text-[18px]">laptop_mac</span> Hybrid
+                            </span>
+<span class="flex items-center gap-1.5 font-caption text-caption text-outline">
+<span class="material-symbols-outlined text-[18px]">work</span> 5+ Years Exp
+                            </span>
+</div>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant">
+<p class="font-caption text-caption text-outline">Promoted Opportunity</p>
+<button class="text-primary font-label-md hover:underline decoration-2 underline-offset-4">View Job</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="max-w-7xl mx-auto px-margin-mobile py-24">
+<div class="bg-primary rounded-3xl p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-[100px]"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-fixed-dim rounded-full blur-[80px]"></div>
+</div>
+<div class="relative z-10 max-w-xl text-center md:text-left">
+<h2 class="font-h1 text-h1 text-white mb-6">Hire the best Kenyan talent today</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-8">Access a pool of verified, skilled professionals ready to take your company to the next level.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-xl font-label-md hover:brightness-110 transition-all">Post a Job Opening</button>
+<button class="bg-transparent border border-white text-white px-8 py-4 rounded-xl font-label-md hover:bg-white/10 transition-all">Employer Pricing</button>
+</div>
+</div>
+<div class="relative z-10 w-full max-w-xs md:max-w-md aspect-square rounded-3xl overflow-hidden border-8 border-on-primary/10 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="successful smiling african woman in business attire holding a digital tablet in a professional environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7nWj8_UNjRnyvnLwl4PKQ_oBSKBVqUQMCpmlru5oUzag4-G67CjAoxp6Hia6zkuorD3SjxCgr8Vnnw_lHoLAIQlJK5tyZK4K4GI6M42K4k9d08XH-OwRhbh1TMBj71zorivsSQdxMrTxFqbikX_wEPbEebkGYIf3k8vSPFz1HdumLbIBtWbSFAju8dzgIWpJUmNcNmgEgay1zCs5EUXpZmgXKhwaI5dBNMv2u4HrWFvjpmt5txSXc75hlu2LUJl6gXqq6ryRR-wE"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-950 dark:bg-black text-emerald-100 border-t border-white/10">
+<div class="w-full py-12 px-6 grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto font-manrope text-sm">
+<div class="space-y-4">
+<span class="text-xl font-black text-emerald-100">KaziLink</span>
+<p class="text-emerald-100/60 leading-relaxed">
+                    Kenya's most trusted recruitment platform. Bridging the gap between ambitious talent and visionary employers across the nation.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-emerald-100/60 hover:text-emerald-400 cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-emerald-100/60 hover:text-emerald-400 cursor-pointer">camera_alt</span>
+<span class="material-symbols-outlined text-emerald-100/60 hover:text-emerald-400 cursor-pointer">alternate_email</span>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-[12px]">Job Seekers</h4>
+<ul class="space-y-3">
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Browse Jobs</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Career Advice</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">CV Builder</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-[12px]">For Employers</h4>
+<ul class="space-y-3">
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Post a Job</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Talent Solutions</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Success Stories</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-[12px]">Support</h4>
+<ul class="space-y-3">
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">About Us</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Contact Support</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">FAQ</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Offices</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 py-8 border-t border-white/5 text-center md:text-left">
+<p class="text-emerald-100/40 text-[12px]">© 2024 KaziLink Kenya. Connecting Talent to Opportunity.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-emerald-950/90 backdrop-blur-md border-t border-emerald-900/10 dark:border-emerald-100/10 shadow-[0_-4px_20px_rgba(9,20,19,0.04)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-50 rounded-xl p-2 transition-transform duration-150 scale-95" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="#">
+<span class="material-symbols-outlined">business_center</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">My Jobs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
