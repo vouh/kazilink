@@ -3,6 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KaziLink | Browse Jobs</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -116,14 +117,14 @@
 <div class="flex items-center gap-8">
 <span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter">KaziLink</span>
 <div class="hidden md:flex gap-6 items-center">
-<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1" href="#">Browse Jobs</a>
-<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Counties</a>
-<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Companies</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1" href="browse-jobs.html">Browse Jobs</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="counties-explorer.html">Counties</a>
+<a class="font-manrope text-sm font-semibold tracking-tight text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="employer-dashboard.html">Companies</a>
 </div>
 </div>
 <div class="flex items-center gap-4">
-<button class="hidden md:block font-manrope text-sm font-semibold text-emerald-900">Sign In</button>
-<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-manrope text-sm font-semibold hover:opacity-90 active:scale-95 transition-all">Post a Job</button>
+<a class="hidden md:block font-manrope text-sm font-semibold text-emerald-900" href="sign-up.html">Sign In</a>
+<a class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-manrope text-sm font-semibold hover:opacity-90 active:scale-95 transition-all" href="post-job.html">Post a Job</a>
 </div>
 </div>
 </nav>
@@ -138,8 +139,8 @@
 <label class="font-label-md text-label-md uppercase text-on-surface-variant block mb-stack-sm">Kenyan Counties</label>
 <div class="h-48 overflow-y-auto custom-scrollbar space-y-2 pr-2">
 <div class="flex items-center gap-2">
-<input class="rounded border-outline-variant text-primary focus:ring-primary" id="nairobi" type="checkbox"/>
-<label class="text-body-md font-body-md" for="nairobi">Nairobi</label>
+<a class="hidden md:block font-manrope text-sm font-semibold tracking-tight text-emerald-700/70 dark:text-emerald-300/70 px-4 py-2" href="sign-up.html">Sign In</a>
+<a class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold tracking-tight hover:opacity-90 active:scale-95 transition-all" href="post-job.html">Post a Job</a>
 </div>
 <div class="flex items-center gap-2">
 <input class="rounded border-outline-variant text-primary focus:ring-primary" id="mombasa" type="checkbox"/>
@@ -293,7 +294,7 @@
 <div class="max-w-md">
 <h4 class="font-h2 text-h2 text-primary mb-2">Upgrade your CV with KaziLink Plus</h4>
 <p class="text-body-md font-body-md text-on-surface-variant mb-6">Get 5x more profile views and priority placement in search results for recruiters.</p>
-<button class="bg-primary text-secondary-fixed px-6 py-2 rounded-lg font-label-md hover:scale-105 transition-transform">Learn More</button>
+<a class="bg-primary text-secondary-fixed px-6 py-2 rounded-lg font-label-md hover:scale-105 transition-transform inline-flex items-center justify-center" href="job-details.html">Learn More</a>
 </div>
 <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors"></div>
 </div>

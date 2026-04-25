@@ -3,6 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KaziLink | Find Your Kazi</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -114,14 +115,14 @@
 <div class="flex items-center gap-8">
 <span class="text-2xl font-black text-emerald-900 dark:text-emerald-50 tracking-tighter">KaziLink</span>
 <nav class="hidden md:flex items-center gap-6 font-manrope text-sm font-semibold tracking-tight">
-<a class="text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1" href="#">Browse Jobs</a>
-<a class="text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Counties</a>
-<a class="text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="#">Companies</a>
+<a class="text-emerald-900 dark:text-emerald-50 border-b-2 border-emerald-900 pb-1" href="browse-jobs.html">Browse Jobs</a>
+<a class="text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="counties-explorer.html">Counties</a>
+<a class="text-emerald-700/70 dark:text-emerald-300/70 hover:text-emerald-900 dark:hover:text-emerald-50 transition-colors" href="employer-dashboard.html">Companies</a>
 </nav>
 </div>
 <div class="flex items-center gap-4">
-<button class="text-emerald-700/70 font-manrope text-sm font-semibold hover:text-emerald-900 transition-colors">Sign In</button>
-<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold hover:opacity-90 active:scale-95 transition-all">Post a Job</button>
+<a class="text-emerald-700/70 font-manrope text-sm font-semibold hover:text-emerald-900 transition-colors" href="sign-up.html">Sign In</a>
+<a class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-manrope text-sm font-semibold hover:opacity-90 active:scale-95 transition-all" href="post-job.html">Post a Job</a>
 </div>
 </div>
 </header>
@@ -149,7 +150,7 @@
 <option>Kiambu County</option>
 </select>
 </div>
-<button class="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-xl font-label-md hover:bg-primary-container transition-all active:scale-95">Search Jobs</button>
+<a class="w-full md:w-auto bg-primary text-white px-10 py-4 rounded-xl font-label-md hover:bg-primary-container transition-all active:scale-95 text-center" href="browse-jobs.html">Search Jobs</a>
 </div>
 </div>
 </section>
@@ -177,9 +178,9 @@
 <h2 class="font-h2 text-h2 text-primary mb-2">Explore by Category</h2>
 <p class="font-body-md text-on-surface-variant">Find the field that best fits your expertise</p>
 </div>
-<button class="hidden md:flex items-center gap-2 text-primary font-label-md hover:underline">
+<a class="hidden md:flex items-center gap-2 text-primary font-label-md hover:underline" href="counties-explorer.html">
                     View All Categories <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
+</a>
 </div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
 <!-- Category Card 1 -->
@@ -255,7 +256,7 @@
 </div>
 <div class="flex items-center justify-between pt-6 border-t border-outline-variant">
 <p class="font-caption text-caption text-outline">Posted 2 hours ago</p>
-<button class="text-primary font-label-md hover:underline decoration-2 underline-offset-4">Apply Now</button>
+<a class="text-primary font-label-md hover:underline decoration-2 underline-offset-4" href="job-application.html">Apply Now</a>
 </div>
 </div>
 <!-- Job Card 2 (Sponsored) -->
@@ -285,7 +286,7 @@
 </div>
 <div class="flex items-center justify-between pt-6 border-t border-outline-variant">
 <p class="font-caption text-caption text-outline">Promoted Opportunity</p>
-<button class="text-primary font-label-md hover:underline decoration-2 underline-offset-4">View Job</button>
+<a class="text-primary font-label-md hover:underline decoration-2 underline-offset-4" href="job-details.html">View Job</a>
 </div>
 </div>
 </div>
@@ -302,7 +303,7 @@
 <h2 class="font-h1 text-h1 text-white mb-6">Hire the best Kenyan talent today</h2>
 <p class="font-body-lg text-body-lg text-primary-fixed mb-8">Access a pool of verified, skilled professionals ready to take your company to the next level.</p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-<button class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-xl font-label-md hover:brightness-110 transition-all">Post a Job Opening</button>
+<a class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-xl font-label-md hover:brightness-110 transition-all" href="post-job.html">Post a Job Opening</a>
 <button class="bg-transparent border border-white text-white px-8 py-4 rounded-xl font-label-md hover:bg-white/10 transition-all">Employer Pricing</button>
 </div>
 </div>
@@ -329,7 +330,7 @@
 <div>
 <h4 class="font-bold text-white mb-6 uppercase tracking-wider text-[12px]">Job Seekers</h4>
 <ul class="space-y-3">
-<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Browse Jobs</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="browse-jobs.html">Browse Jobs</a></li>
 <li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Career Advice</a></li>
 <li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">CV Builder</a></li>
 <li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Privacy Policy</a></li>
@@ -338,7 +339,7 @@
 <div>
 <h4 class="font-bold text-white mb-6 uppercase tracking-wider text-[12px]">For Employers</h4>
 <ul class="space-y-3">
-<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Post a Job</a></li>
+<li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="post-job.html">Post a Job</a></li>
 <li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Talent Solutions</a></li>
 <li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Success Stories</a></li>
 <li><a class="text-emerald-100/60 hover:text-emerald-400 transition-colors" href="#">Terms of Service</a></li>
@@ -360,19 +361,19 @@
 </footer>
 <!-- BottomNavBar (Mobile Only) -->
 <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-emerald-950/90 backdrop-blur-md border-t border-emerald-900/10 dark:border-emerald-100/10 shadow-[0_-4px_20px_rgba(9,20,19,0.04)] rounded-t-2xl">
-<a class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-50 rounded-xl p-2 transition-transform duration-150 scale-95" href="#">
+<a class="flex flex-col items-center justify-center bg-emerald-100 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-50 rounded-xl p-2 transition-transform duration-150 scale-95" href="index.html">
 <span class="material-symbols-outlined">home</span>
 <span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
 </a>
-<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="#">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="browse-jobs.html">
 <span class="material-symbols-outlined">search</span>
 <span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Search</span>
 </a>
-<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="#">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="post-job.html">
 <span class="material-symbols-outlined">business_center</span>
 <span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">My Jobs</span>
 </a>
-<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="#">
+<a class="flex flex-col items-center justify-center text-emerald-800/50 dark:text-emerald-200/50 p-2" href="sign-up.html">
 <span class="material-symbols-outlined">account_circle</span>
 <span class="font-manrope text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
 </a>
